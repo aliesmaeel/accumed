@@ -2,20 +2,7 @@
 
 
 @section('page_banner')
-
-<div class="relative mx-auto px-32 py-32 sm:px-6 lg:flex lg:h-screen lg:px-8 pt-28 pb-28 hero contact1">
-    <div class="max-w-4xl text-left lg:pl-40 md:pl-6">
-
-        <h1 class="lg:text-8xl sm:text-5xl md:text-6xl font-bold color-green mb-5 heavy-font uppercase">
-
-            Why <span class="text-blue">RCM</span> for healthcare?
-        </h1>
-        <p class="text-white text-lg heavy-font leading-5 ">Financial stability and viability of healthcare organizations. Effective revenue cycle management optimizes the billing and reimbursement processes, maximizing the collection of revenue for services rendered. This, in turn, enables healthcare providers to meet their operational costs, invest in cutting-edge technologies, and deliver high-quality patient care.
-
-        </p>
-
-    </div>
-</div>
+    @include('components.services_banner')
 @endsection
 
 
@@ -23,7 +10,6 @@
 
 @section('content')
 <section class=" bg-light m-auto">
-
     <!-- first section  -->
     <div class="bg-[url('/images/lines_bg_1.png')] bg-cover px-16">
 
@@ -33,8 +19,10 @@
         <div class="flex pt-3 mt-4 lg:min-h-[534px] lg:py-0 md:py-4">
             <div class="w-5/12 benifits text-center">
                 <img src="/images/plant.png">
-                <p class="text-7xl leading-9 uppercase heavy-font text-a-grey text-center">
-                    <span class="loc">Ben</span>ifits
+                <p class="
+                 sm:text-sm md:text-2xl lg:text-7xl xl:text-7xl
+                 leading-9 uppercase heavy-font text-a-grey text-center">
+                    <span class="loc">Bene</span>fits
                 </p>
             </div>
             <div class="w-7/12 flex items-center px-5">
@@ -68,7 +56,7 @@
             </div> -->
 
             <div class="mb-3">
-                <div class="w-full bg-a-grey text-green px-3 py-2 rounded-lg heavy-font text-lg" data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" data-te-target="#collapse_{{ $loop->index }}" aria-expanded="false" aria-controls="collapse_{{ $loop->index }}">
+                <div class="w-full bg-a-grey text-green px-3 py-2 rounded-lg heavy-font text-md" data-te-collapse-init data-te-ripple-init data-te-ripple-color="light" data-te-target="#collapse_{{ $loop->index }}" aria-expanded="false" aria-controls="collapse_{{ $loop->index }}">
                     {{ $focus_on['title'] ?? '' }}
                 </div>
                 <div class="w-full !visible hidden px-3 py-4 heavy-font text-md bg-a-darker-grey" id="collapse_{{ $loop->index }}" data-te-collapse-item>
@@ -80,7 +68,7 @@
         </div>
 
         <div class="md:w-1/2 sm:w-full items-center relative lg:pl-16 md:px-4 sm:px-0">
-            <p class="text-9xl text-a-grey uppercase heavy-font"> We <span class="bg-[url('/images/target.png')] bg-no-repeat bg-contain bg-left-center focus leading-tight">focus</span> on </p>
+            <p class="custom-text-9xl  text-a-grey uppercase heavy-font"> We <span class="bg-[url('/images/target.png')] bg-no-repeat bg-contain bg-left-center focus leading-tight">focus</span> on </p>
             <!-- <img src="/images/coffee.png" class="coffee"> -->
         </div>
 
