@@ -4,6 +4,9 @@
   This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
 -->
 <style>
+    .yelloButton{
+        background: #CCE72E;
+    }
     section.org-section {
         margin: 6rem auto;
         height: 423px;
@@ -54,7 +57,7 @@
 
             <div class="mt-8 flex gap-4 text-center call-write-button">
                 <a href="#"
-                    class="block w-full rounded bg-white px-12 py-3  text-sm font-bold text-black shadow focus:outline-none focus:ring sm:w-auto text-black">
+                    class=" yelloButton block w-full rounded bg-white px-12 py-3  text-sm font-bold text-black shadow focus:outline-none focus:ring sm:w-auto text-black">
                     Schedule a call
                 </a>
 

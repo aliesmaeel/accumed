@@ -11,7 +11,7 @@
     background-size:cover;
 } */
 body{
-    background-color:white;
+    background-color:#F4F4F4;
 }
 .LOCATE-US .text-green{
  color:#597B7C;
@@ -90,9 +90,9 @@ textarea{
     .loc:before{
         content: " ";
         display: block;
-        height: 44%;
+        height: 50%;
         width: 100%;
-        margin-left: -3px;
+        margin-left: 0px;
         margin-right: -3px;
         position: absolute;
         background: #CCE72E;
@@ -112,7 +112,7 @@ textarea{
 
 }
 .white_background_color{
-    background-color: white;
+    background-color: #F4F4F4;
 }
 
 </style>
@@ -207,9 +207,9 @@ textarea{
 
           </div>
         </div>
-        <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12 mob-1" style="width: 52%;">
+        <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12 mob-1" style="width: 52%;padding-left: 8px">
           <div class="flex flex-wrap  pt-12 pb-12 md:pb-0 lg:pt-0 details">
-            <div class="mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:w-6/12 md:px-6 lg:w-full xl:w-6/12 xl:px-12 ">
+            <div class="mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:w-6/12 md:px-6 lg:w-full xl:w-8/12 pl-10">
               <p class="flex flex-wrap  pt-12 pb-12 md:pb-0 lg:pt-0 font-bold  text-left my-6 mt-8 text-xl text-gray ltd">
                 Accumed Saudi<br>
 Company Ltd
