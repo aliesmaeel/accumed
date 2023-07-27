@@ -120,7 +120,7 @@ column-gap:6px;
         </p>
     </div>
 
-    <div class="flex  grid-cols-1 lg:grid md:grid-cols-3 my-service p-4 only-services">
+    <div class="flex  grid-cols-4 lg:grid md:grid-cols-4 my-service p-4 only-services">
         <div class="p-8 text-center flex flex-col justify-space-between ser">
             <div class="flex justify-center items-center">
                 <img id="" src="{{ asset('/images/HomePage/rcm1.svg') }}" class="services services1" />

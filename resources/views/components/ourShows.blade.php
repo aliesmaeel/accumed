@@ -83,7 +83,7 @@ use App\Models\HomePage;
     <div
         class="relative flex-col items-center mx-auto  px-4  sm:px-6 lg:flex  lg:items-center lg:px-8 myShows">
         <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-            <h1 class="text-3xl text-center font-extrabold sm:text-5xl color-green">
+            <h1 class="text-3xl text-center font-extrabold sm:text-3xl color-green">
                 <span class="bg-green"> YOU </span> HANDLE YOUR PATIENTS,<br>
                 <span class="bg-green"> WE</span> HANDLE YOUR ADMINISTRATIVE TASKS!
 
