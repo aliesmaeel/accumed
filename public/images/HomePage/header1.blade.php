@@ -15,8 +15,9 @@
     
     <nav class="">
     <div class="container mx-auto flex flex-wrap items-center justify-around" style="">
-        <a href="/home" class="flex">
-        <img src="{{ asset('/images/HomePage/logoMain.png') }}" class="header-logo" class="ml-44 h-6 sm:h-9" />
+        <a href="#" class="flex">
+        <img src="{{ asset('/images/HomePage/logoMain.svg') }}" class="header-logo" class="ml-44 h-6 sm:h-9" />
+        
         </a>
         <button data-collapse-toggle="mobile-menu" type="button" class="md:hidden ml-3 text-white hover:text-gray-900 focus:outline-none   inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
         <span class="sr-only">Open main menu</span>

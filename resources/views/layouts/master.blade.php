@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body style="background-color: #f4f4f4">
   <!-- <h1 class="text-3xl font-bold underline">
     Hello world!
   </h1> -->
@@ -34,7 +34,7 @@
 
     </section>
   </header>
-
+  <div class="container mx-auto" >
   <!-- Page Content  -->
   @yield('content')
   <!-- Page component  -->
@@ -43,6 +43,7 @@
   @include('layouts.footer1')
   <!-- <script type="text/javascript" src="/node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script> -->
   <!--  Footer Area End  -->
+  </div>
 </body>
 
 </html>

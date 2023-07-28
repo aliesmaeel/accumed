@@ -103,6 +103,9 @@ use App\Models\HomePage;
     .price{
         height: 79px;
     }
+    .p-4{
+        padding: 1rem;
+    }
     div.my-service.p-4.only-services{
 column-gap:6px;
     }
@@ -110,7 +113,6 @@ column-gap:6px;
 <div class="secion-service">
     <div class="p-8">
         <div class="flex felx-col items-center justify-center">
-
         </div>
         <h1 class="text-4xl font-medium  text-gray-700 text-center ">
             <span class="baby-green">SER</span><span class="baby-gray">VICES</span>
@@ -119,76 +121,60 @@ column-gap:6px;
             We Increase Efficiency
         </p>
     </div>
-
     <div class="flex  grid-cols-4 lg:grid md:grid-cols-4 my-service p-4 only-services">
         <div class="p-8 text-center flex flex-col justify-space-between ser">
             <div class="flex justify-center items-center">
-                <img id="" src="{{ asset('/images/HomePage/rcm1.svg') }}" class="services services1" />
-
+                <img id="" src="https://accumed.aratech.co/images/HomePage/rcm1.svg" class="services services1">
             </div>
             <h2 class="uppercase mt-6  font-bold mb-3 ">
                 RCM
             </h2>
             <p class="font-bold text-sm text-gray-500 ">
-                {{ HomePage::firstOrFail()->fistServiceDescription }}
+                Lowering expenses &amp; improving patient experience
             </p>
-
-
-            <a href="#"
-                class="ser block w-full rounded bg-white px-12 py-3 text-sm font-bold text-black shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto hover:bg-green-500 text-black">
+            <a href="#" class="ser block w-full rounded bg-white px-12 py-3 text-sm font-bold text-black shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto hover:bg-green-500 text-black">
                 Read More
             </a>
-
         </div>
-
         <div class="p-8 text-center flex flex-col justify-space-between ser">
             <div class="flex justify-center items-center">
-                <img id="" src="{{ asset('/images/HomePage/consul1.svg') }}" class="services services1" />
-
+                <img id="" src="https://accumed.aratech.co/images/HomePage/consul1.svg" class="services services1">
             </div>
             <h2 class="uppercase mt-6 font-bold mb-3 ">
                 CONSULTANCY
             </h2>
             <p class="font-bold text-sm text-gray-500 ">
-                {{ HomePage::firstOrFail()->secondServiceDescription }}
-
+                Advising on the best integration between operations &amp; finance
             </p>
-            <a href="#"
-                class="ser block w-full rounded bg-white px-12 py-3 text-sm font-bold text-black shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto hover:bg-green-500 text-black">
+            <a href="#" class="ser block w-full rounded bg-white px-12 py-3 text-sm font-bold text-black shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto hover:bg-green-500 text-black">
                 Read More
             </a>
         </div>
         <div class="p-8 text-center flex flex-col justify-space-between ser">
             <div class="flex justify-center  items-center">
-                <img id="" src="{{ asset('/images/HomePage/tech1.svg') }}" class="services services1" />
-
+                <img id="" src="https://accumed.aratech.co/images/HomePage/tech1.svg" class="services services1">
             </div>
             <h2 class="uppercase mt-6  font-bold mb-3 ">
                 TECHNOLOGY
             </h2>
             <p class="font-bold  text-gray-500 text-sm tech">
-                {{ HomePage::firstOrFail()->thirdServiceDescription }}
-
+                Built in Intelligence for effective communication &amp; revenue leakage prevention
             </p>
-            <a href="#"
-                class="ser block w-full rounded bg-white px-12 py-3 text-sm font-bold text-black shadow  focus:outline-none focus:ring active:bg-rose-500 sm:w-auto hover:bg-green-500 text-black auto">
+            <a href="#" class="ser block w-full rounded bg-white px-12 py-3 text-sm font-bold text-black shadow  focus:outline-none focus:ring active:bg-rose-500 sm:w-auto hover:bg-green-500 text-black auto">
                 Read More
             </a>
         </div>
         <div class="p-8 text-center flex flex-col justify-space-between ser">
             <div class="flex justify-center items-center">
-                <img id="" src="{{ asset('/images/HomePage/pric1.svg') }}" class="services services1" />
-
+                <img id="" src="https://accumed.aratech.co/images/HomePage/pric1.svg" class="services services1">
             </div>
             <h2 class="uppercase mt-6 font-bold mb-3 ">
-                PRICING & CONTRACTING
+                PRICING &amp; CONTRACTING
             </h2>
             <p class="font-bold text-sm text-gray-500 price">
-                {{ HomePage::firstOrFail()->fourthServiceDescription }}
-
+                Ensuring fair pricing of your contract so you can maximize your revenue
             </p>
-            <a href="#"
-                class="ser block w-full rounded bg-white px-12 py-3 text-sm font-bold text-black shadow  focus:outline-none focus:ring active:bg-rose-500 sm:w-auto hover:bg-green-500 text-black auto">
+            <a href="#" class="ser block w-full rounded bg-white px-12 py-3 text-sm font-bold text-black shadow  focus:outline-none focus:ring active:bg-rose-500 sm:w-auto hover:bg-green-500 text-black auto">
                 Read More
             </a>
         </div>

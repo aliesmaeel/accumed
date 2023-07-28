@@ -59,7 +59,8 @@ use App\Models\HomePage;
         " id="nav">
     <div>
         <a href="/home">
-            <img src="{{ asset('/images/HomePage/logoMain.png') }}" class="header-logo" class="ml-44 h-6 sm:h-9" />
+            <img src="{{ asset('/images/HomePage/logoMain.svg') }}" class="header-logo" class="ml-44 h-6 sm:h-9" />
+
         </a>
     </div>
 
