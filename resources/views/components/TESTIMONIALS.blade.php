@@ -125,7 +125,7 @@ use App\Models\HomePage;
         <h1 class="text-5xl font-medium lg:text-2xl text-gray-700 text-center TESTIMONIALS">
             <span class="baby-green">TESTIMO</span><span class="baby-gray">NIALS</span>
         </h1>
-        <p class="text-center  text-3xl font-bold text-gray-500 Proven">
+        <p class="text-center mt-6  text-3xl font-bold text-gray-500 Proven">
             Our Proven Track Record
 
         </p>
@@ -135,7 +135,7 @@ use App\Models\HomePage;
         <div class="swiper-wrapper">
             <div class="p-8 text-center swiper-slide">
                 <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/authorMassege.svg') }}" class="services authorMassege" />
+                    <img id="" src="{{ asset('/images/HomePage/authorMassege.jpeg') }}" class="services authorMassege" />
                     <div class="grid absolute message">
                         <p class="absolute text-center message1">“ Great Service ”</p>
                         <p class="absolute text-center message2">Lorem ipsum
@@ -154,7 +154,7 @@ use App\Models\HomePage;
 
             <div class="p-8 text-center swiper-slide">
                 <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/authorMassege.svg') }}" class="services authorMassege" />
+                    <img id="" src="{{ asset('/images/HomePage/authorMassege.jpeg') }}" class="services authorMassege" />
                     <div class="grid absolute message">
                         <p class="absolute text-center message1">“ Great Service ”</p>
                         <p class="absolute text-center message2">Lorem ipsum
@@ -171,7 +171,7 @@ use App\Models\HomePage;
             </div>
             <div class="p-8 text-center swiper-slide">
                 <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/authorMassege.svg') }}" class="services authorMassege" />
+                    <img id="" src="{{ asset('/images/HomePage/authorMassege.jpeg') }}" class="services authorMassege" />
                     <div class="grid absolute message">
                         <p class="absolute text-center message1">“ Great Service ”</p>
                         <p class="absolute text-center message2">Lorem ipsum
@@ -188,7 +188,7 @@ use App\Models\HomePage;
             </div>
             <div class="p-8 text-center swiper-slide">
                 <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/authorMassege.svg') }}" class="services authorMassege" />
+                    <img id="" src="{{ asset('/images/HomePage/authorMassege.jpeg') }}" class="services authorMassege" />
                     <div class="grid absolute message">
                         <p class="absolute text-center message1">“ Great Service ”</p>
                         <p class="absolute text-center message2">Lorem ipsum
@@ -207,7 +207,7 @@ use App\Models\HomePage;
 
             <div class="p-8 text-center swiper-slide">
                 <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/authorMassege.svg') }}" class="services authorMassege" />
+                    <img id="" src="{{ asset('/images/HomePage/authorMassege.jpeg') }}" class="services authorMassege" />
                     <div class="grid absolute message">
                         <p class="absolute text-center message1">“ Great Service ”</p>
                         <p class="absolute text-center message2">Lorem ipsum
@@ -224,7 +224,7 @@ use App\Models\HomePage;
             </div>
             <div class="p-8 text-center swiper-slide">
                 <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/authorMassege.svg') }}" class="services authorMassege" />
+                    <img id="" src="{{ asset('/images/HomePage/authorMassege.jpeg') }}" class="services authorMassege" />
                     <div class="grid absolute message">
                         <p class="absolute text-center message1">“ Great Service ”</p>
                         <p class="absolute text-center message2">Lorem ipsum
@@ -278,6 +278,7 @@ use App\Models\HomePage;
                 spaceBetween: 30
             },
         },
+
         loop: true
 
 

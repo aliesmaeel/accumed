@@ -7,6 +7,7 @@
     .yelloButton{
         background: #CCE72E;
     }
+
     section.org-section {
         margin: 6rem auto;
         height: 423px;
@@ -33,8 +34,8 @@
     .color-green.font-heavy{
     font-family: "BlissPro-Heavy";
     color:#C4D93D;
-
     }
+
 </style>
 <section
     class="relative bg-[url('https://accumed.aratech.co/images/HomePage/organizationIMG.png')]  bg-cover bg-center bg-no-repeat org org-section mt-7">

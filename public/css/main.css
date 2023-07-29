@@ -794,6 +794,7 @@ div.my-icon {
     .sm\:mt-0 {
         margin-top: 0px;
     }
+
 }
 
 .space-x-4> :not([hidden])~ :not([hidden]) {
@@ -890,6 +891,9 @@ div.my-icon {
     width: 100% !important;
     font-size: xx-small;
  } */
+
+
+
     .recent-jobs-container.report,
     .reports .flex.gap-6.space-between.mt-8 {
         display: grid;
@@ -981,7 +985,7 @@ div.my-icon {
     .swiper-rtl .swiper-button-next:after,
     .swiper-button-next:after,
     .swiper-rtl .swiper-button-prev:after {
-        background-color: #C8EC48;
+        background-color: #DDDE3A;
         border-radius: 33px !important;
         width: 15px;
         color: black !important;
@@ -1035,6 +1039,11 @@ div.my-icon {
         line-height: 3.1px !important;
         width: 65px !important;
     }
+
+
+        .yelloButton {
+            font-size: 10px !important;
+        }
 }
 
 
@@ -1203,6 +1212,8 @@ header {
 }
 
 @media (min-width:200px) and (max-width:640px) {
+
+
     .text-blue:before {
         height: 8px;
         z-index: -2;
@@ -1222,15 +1233,26 @@ header {
     }
 
 }
+@media (max-width: 360px) {
+    .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+    }
+    .swiper-slide{
+        padding: 0rem !important;
+    }
+}
 
 @media (max-width:295px) {
     .loc:before {
         top: 13px;
     }
-
     .custom-text-9xl{
         font-size: 2.5rem;
         line-height: 1;
     }
 }
+
+
 

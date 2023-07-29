@@ -7,6 +7,7 @@ use App\Models\GetInTouch;
 <link rel="stylesheet"
     href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"> -->
 <style>
+
   footer {
     background-color: #597B7C !important;
     color: white !important;
@@ -47,6 +48,7 @@ use App\Models\GetInTouch;
 
   .getINtouch .sm-title {
     line-height: 12px;
+    width: 60%;
   }
 
   .grid-cols-6.gap-5.row-gap-8 {
