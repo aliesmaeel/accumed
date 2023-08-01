@@ -121,7 +121,7 @@ column-gap:6px;
             We Increase Efficiency
         </p>
     </div>
-    <div class="flex  grid-cols-4 lg:grid md:grid-cols-4 my-service p-4 only-services">
+    <div class="flex  grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 md:grid-cols-4 sm:grid-cols-2  my-service p-4 only-services">
         <div class="p-8 text-center flex flex-col justify-space-between ser">
             <div class="flex justify-center items-center">
                 <img id="" src="https://accumed.aratech.co/images/HomePage/rcm1.svg" class="services services1">

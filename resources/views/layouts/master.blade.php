@@ -26,7 +26,6 @@
   </h1> -->
   <!--  Header Area -->
   <header class=" ">
-
     <section class="relative bg-[url('{{ $header_image ?? '/images/HomePage/MainBanner2.png' }}')]  bg-cover bg-center bg-no-repeat org header-nav" style="background-image: url('{{ $header_image ?? '/images/HomePage/MainBanner2.png' }}');">
 
       @include('layouts.header1')
@@ -34,7 +33,6 @@
 
     </section>
   </header>
-  <div class="container mx-auto" >
   <!-- Page Content  -->
   @yield('content')
   <!-- Page component  -->
@@ -43,7 +41,7 @@
   @include('layouts.footer1')
   <!-- <script type="text/javascript" src="/node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script> -->
   <!--  Footer Area End  -->
-  </div>
+
 </body>
 
 </html>

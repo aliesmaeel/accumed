@@ -196,20 +196,20 @@ textarea{
 
 <div class="container flex justify-center my-24 mx-auto md:px-6">
 
-  <section class="mb-32"style='margin-left: 64px;'>
+  <section class="mb-32 lg:ml-4 ml-0">
     <div
       class="block  ">
-      <div class="flex flex-wrap items-center on-mobile" style="place-content: space-between;">
-        <div class="flex flex-wrap w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12  shadow-xl map">
+      <div class="flex flex-wrap items-center  xl:ml-20 md:ml-20 lg:ml-20 on-mobile" >
+        <div class="flex flex-wrap w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-7/12  shadow-xl map">
           <div class="h-full w-full"  style='height:400px;'>
 
-              <iframe class="shadow-xl" src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" width="650" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe class="shadow-xl w-full" src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" width="650" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
           </div>
         </div>
-        <div class="w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12 mob-1" style="width: 52%;padding-left: 8px">
+        <div class="w-full location shrink-0 grow-0 basis-auto w-12/12 lg:w-6/12 xl:w-8/12 mob-1" style="width: 40%">
           <div class="flex flex-wrap  pt-12 pb-12 md:pb-0 lg:pt-0 details">
-            <div class="mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:w-6/12 md:px-6 lg:w-full xl:w-8/12 pl-10">
+            <div class="mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:w-full md:px-6 lg:w-full xl:w-full pl-10">
               <p class="flex flex-wrap  pt-12 pb-12 md:pb-0 lg:pt-0 font-bold  text-left my-6 mt-8 text-xl text-gray ltd">
                 Accumed Saudi<br>
 Company Ltd
@@ -262,19 +262,13 @@ Company Ltd
           </div>
         </div>
       </div>
-    </div>
   </section>
-
 </div>
             </div>
 
             </div>
             </section>
-
-
         @include('components.organization')
-
-
     </section>
             </div>
 @endsection

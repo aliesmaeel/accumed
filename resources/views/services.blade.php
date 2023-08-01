@@ -69,7 +69,7 @@
 
         <div class="md:w-1/2 sm:w-full items-center relative lg:pl-16 md:px-4 sm:px-0">
             <p class="custom-text-9xl  text-a-grey uppercase heavy-font"> We <span class="bg-[url('/images/target.png')] bg-no-repeat bg-contain bg-left-center focus leading-tight">focus</span> on
-                <img src="/images/TeaCup.png" class="coffee">
+                <img src="/images/Tea-Cup.png" class="coffee">
 
             </p>
 

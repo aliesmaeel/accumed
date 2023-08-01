@@ -103,7 +103,7 @@ use App\Models\HomePage;
     }
 
     div#authAndName img {
-        width: 29%;
+        width: 60px;
     }
     .TESTIMONIALS h1.TESTIMONIALS {
     font-size: 116px;
@@ -269,13 +269,19 @@ use App\Models\HomePage;
         breakpoints: {
             // when window width is >= 320px
             320: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 20
             },
+
+            760: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+
             // when window width is >= 480px
             480: {
-                slidesPerView: 3,
-                spaceBetween: 30
+                slidesPerView: 2,
+                spaceBetween: 20
             },
         },
 

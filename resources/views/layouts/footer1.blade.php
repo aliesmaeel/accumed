@@ -106,7 +106,7 @@ use App\Models\GetInTouch;
   </svg> -->
   <div class="px-16 pt-12 mx-auto sm:max-w-xl md:max-w-full md:pl-16 ">
     <div class="grid  row-gap-10 mb-8 lg:grid-cols-6">
-      <div class="lg:col-span-1 sm:col-span-2">
+      <div class="lg:col-span-1 sm:col-span-2 pb-3">
         <a href="/" aria-label="Go home" title="Company" class="inline-flex items-center mt-4">
 
           <img class="text-teal-accent-400" src="https://accumed.aratech.co/images/HomePage/logo-footer.svg">

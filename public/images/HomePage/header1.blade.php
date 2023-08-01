@@ -14,7 +14,7 @@
 <div class=" mx-auto">
     
     <nav class="">
-    <div class="container mx-auto flex flex-wrap items-center justify-around" style="">
+    <div class="container mx-auto flex flex-wrap items-center justify-between" style="">
         <a href="#" class="flex">
         <img src="{{ asset('/images/HomePage/logoMain.svg') }}" class="header-logo" class="ml-44 h-6 sm:h-9" />
         

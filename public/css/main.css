@@ -42,10 +42,12 @@ header {
 
 label.career-type {
     position: relative;
-    left: 45%;
+    left: 25%;
     width: max-content;
-    font-size: 14px;
+    font-size: 13px;
     color: #597B7C !important;
+    height: max-content;
+    top: 40%;
 }
 
 [type=checkbox]:checked,
@@ -396,12 +398,12 @@ button.apply {
     /* margin:auto 96px; */
     /* margin-left: 182px; */
     /* margin-left: 150px; */
-    margin-left: 76px;
+    width: 100%;
     margin-right: auto;
 }
 
 .careers-details {
-    padding: 3rem;
+    padding: 0.5rem;
 }
 
 .careers .my-contact {
@@ -757,7 +759,7 @@ div.my-icon {
 }
 
 .contactUs .lg\:w-9\/12 {
-    width: 90%;
+    width: 100%;
 }
 
 .grid-cols-2 {
@@ -784,11 +786,11 @@ div.my-icon {
     }
 }
 
-@media (min-width: 768px) {
-    .md\:grid-cols-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-}
+/*@media (min-width: 768px) {*/
+/*    .md\:grid-cols-4 {*/
+/*        grid-template-columns: repeat(4, minmax(0, 1fr));*/
+/*    }*/
+/*}*/
 
 @media (min-width: 640px) {
     .sm\:mt-0 {
@@ -847,9 +849,9 @@ div.my-icon {
     .result-search {
         display: grid !important;
     }
-    .md\:grid-cols-2 {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
+    /*.md\:grid-cols-2 {*/
+    /*    grid-template-columns: repeat(1, minmax(0, 1fr));*/
+    /*}*/
     .careers .choose {
         margin: auto !important;
     }
@@ -876,8 +878,8 @@ div.my-icon {
     }
     .my-service p.message1,
     .my-service p.message2 {
-        width: 187px;
-        font-size: xx-small;
+        font-size: 7px !important;
+        width: 55% !important;
     }
 }
 
@@ -941,7 +943,7 @@ div.my-icon {
     }
     div#authAndName p {
         font-size: 8px;
-        line-height: 5.7px;
+        line-height: 8px;
         margin: inherit;
     }
     p.message2 {
@@ -950,6 +952,7 @@ div.my-icon {
     }
     .services.authorMassege {
         width: 100% !important;
+        padding: 8px;
     }
     .my-service {
         display: grid !important;
@@ -1029,16 +1032,11 @@ div.my-icon {
     }
     .TESTIMONIALS .message1 {
         width: 100% !important;
-        font-size: 7px !important;
+        font-size: 18px !important;
         line-height: normal;
         padding-bottom: inherit;
     }
-    .TESTIMONIALS .message2 {
-        width: 40% !important;
-        margin-right: auto;
-        line-height: 3.1px !important;
-        width: 65px !important;
-    }
+
 
 
         .yelloButton {
@@ -1071,6 +1069,9 @@ img.iconFooter {
 @media(max-width: 760px) {
     div#one {
         padding-left: inherit !important;
+    }
+    .my-service p.message1, .my-service p.message2 {
+        font-size: 8px !important;
     }
 }
 
@@ -1211,9 +1212,26 @@ header {
     line-height: 1;
 }
 
+@media (min-width: 640px) and (max-width: 1024px) {
+    .location {
+        width: 90% !important;
+    }
+}
+
+@media (max-width:767px) {
+    label.career-type {
+        position: relative;
+        left: 36%;
+        width: max-content;
+        font-size: 13px;
+        color: #597B7C !important;
+        height: max-content;
+        top: 47%;
+
+    }
+}
+
 @media (min-width:200px) and (max-width:640px) {
-
-
     .text-blue:before {
         height: 8px;
         z-index: -2;
@@ -1230,6 +1248,24 @@ header {
     .custom-text-9xl{
         font-size: 2.5rem;
         line-height: 1;
+    }
+
+
+
+    .TESTIMONIALS .message2 {
+        width: 40% !important;
+        margin-right: auto;
+        line-height: 10px !important;
+    }
+
+    label.career-type {
+        position: relative;
+        left: 23%;
+        width: max-content;
+        font-size: 13px;
+        color: #597B7C !important;
+        height: max-content;
+        top: 48%;
     }
 
 }
@@ -1253,6 +1289,8 @@ header {
         line-height: 1;
     }
 }
+
+
 
 
 
