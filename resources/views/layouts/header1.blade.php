@@ -9,12 +9,22 @@
 .justify-around {
     justify-content: space-around;
 }
+#dropdownNavbar{
+    font-size: 14px;
+    line-height: 19px;
+    color: #333333;
+    font-weight: bold;
+    font-family: "Bliss Pro";
+    width: 144px;
+    height: 160px;
+
+}
 </style>
 <!-- This is an example component -->
 <div class=" mx-auto">
     
     <nav class="">
-    <div class="container mx-auto flex flex-wrap items-center justify-between" style="">
+    <div class="container mx-auto flex flex-wrap items-center justify-around" style="">
         <a href="/home" class="flex">
         <img src="{{ asset('/images/HomePage/logoMain.png') }}" class="header-logo" class="ml-44 h-6 sm:h-9" />
         </a>

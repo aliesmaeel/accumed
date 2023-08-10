@@ -9,11 +9,11 @@ class JobController extends Controller
     
     public function search(Request $request)
     {
+
         $request->validate([
             'job_title' => 'required|string',
             'type'=> 'required|string'
         ]);
-
         $query=Job::all();
 
         if(isset($request->job_title )){
@@ -22,9 +22,7 @@ class JobController extends Controller
         if(isset($request->type )){
             $query = $query->where('type',$request->type);
         }
-
         return view('search', ['jobs' => $query]);
-
     }
 }
 

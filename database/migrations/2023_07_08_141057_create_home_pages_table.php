@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('home_pages', function (Blueprint $table) {
             $table->id();
-            $table->text('heroText');
+            $table->text('hero_text');
             $table->text('fistServiceDescription');
             $table->text('secondServiceDescription');
             $table->text('thirdServiceDescription');
             $table->text('fourthServiceDescription');
-            $table->text('firstOurShows');
 
+            $table->text('firstOurShows');
             $table->text('secondOurShows');
             $table->text('thirdOurShows');
 
@@ -29,7 +29,12 @@ return new class extends Migration
             $table->text('secondOurShowsDescription');
             $table->text('thirdOurShowsDescription');
 
+            
+
+
+            $table->tinyInteger('active');
             $table->timestamps();
+
         });
     }
 

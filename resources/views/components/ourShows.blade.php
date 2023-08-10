@@ -72,6 +72,9 @@ use App\Models\HomePage;
     img.our-shows{
         width: 26% !important;
     }
+    .max-w-xl {
+        max-width: 43rem;
+    }
 </style>
 
 <section
@@ -82,7 +85,7 @@ use App\Models\HomePage;
 
     <div
         class="relative flex-col items-center mx-auto  px-4  sm:px-6 lg:flex  lg:items-center lg:px-8 myShows">
-        <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+        <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right HomepageOurShows">
             <h1 class="text-3xl text-center font-extrabold sm:text-3xl color-green">
                 <span class="bg-green"> YOU </span> HANDLE YOUR PATIENTS,<br>
                 <span class="bg-green"> WE</span> HANDLE YOUR ADMINISTRATIVE TASKS!
@@ -101,13 +104,13 @@ use App\Models\HomePage;
                 <div class="flex justify-center items-center  h-65">
                     <img id="" src="{{ asset('/images/HomePage/one.svg') }}" class="our-shows" />
                     <h2 class=" mt-6  font-medium mb-3 text-white text-left w-min-content">
-                        {{ HomePage::firstOrFail()->firstOurShows }}
+                        {{ $HomePage->firstOurShows }}
 
                     </h2>
                 </div>
 
                 <p class="font-light text-sm text-white mb-3">
-                    {{ HomePage::firstOrFail()->firstOurShowsDescription }}
+                    {{ $HomePage->firstOurShowsDescription }}
 
                 </p>
 
@@ -120,14 +123,14 @@ use App\Models\HomePage;
                 <div class="flex justify-center items-center  h-65">
                     <img id="" src="{{ asset('/images/HomePage/two.svg') }}" class="our-shows" />
                     <h2 class=" mt-6 font-medium mb-3 text-white text-left w-min-content">
-                        {{ HomePage::firstOrFail()->secondOurShows }}
+                        {{ $HomePage->secondOurShows }}
 
                     </h2>
                 </div>
 
                 <p class="font-light text-sm text-white mb-3">
 
-                    {{ HomePage::firstOrFail()->secondOurShowsDescription }}
+                    {{ $HomePage->secondOurShowsDescription }}
 
                 </p>
 
@@ -136,14 +139,14 @@ use App\Models\HomePage;
                 <div class="flex justify-center items-center  h-65">
                     <img id="" src="{{ asset('/images/HomePage/three.svg') }}" class="our-shows" />
                     <h2 class=" mt-6 text-white font-medium mb-3 text-left w-min-content">
-                        {{ HomePage::firstOrFail()->thirdOurShows }}
+                        {{ $HomePage->thirdOurShows }}
 
                     </h2>
                 </div>
 
                 <p class="font-light text-sm  mb-3 text-white">
 
-                    {{ HomePage::firstOrFail()->thirdOurShowsDescription }}
+                    {{ $HomePage->thirdOurShowsDescription }}
 
                 </p>
 

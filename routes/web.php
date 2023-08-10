@@ -1,6 +1,13 @@
 <?php
+
+use App\Http\Controllers\Frontend\BlogsController;
+use App\Http\Controllers\Frontend\CareersController;
+use App\Http\Controllers\Frontend\HomePageController;
+use App\Http\Controllers\Frontend\NewsController;
+use App\Http\Controllers\Frontend\ReportsController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\ClientController;
+
 use App\Http\Controllers\ServiceController;
 
 use Illuminate\Support\Facades\Route;
@@ -18,35 +25,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-   
+    return redirect('/home');
 });
-Route::get('/home', function () {
-    return view('Home');
-   
-});
+
+Route::get('/home',[HomePageController::class,'Home']);
 Route::get('/contact', function () {
     return view('contactUs');
    
 });
-Route::get('/careers', function () {
-    return view('careers');
-   
-});
-Route::get('/news', function () {
-    return view('News');
-   
-});
-Route::get('/blog', function () {
-    return view('blog');
-   
-});
-Route::get('/reports', function () {
-    return view('report');
-   
-});
+
+Route::get('/careers',[CareersController::class,'Careers']);
+
+Route::get('/news',[NewsController::class,'News']);
+Route::get('/blog',[BlogsController::class,'Blogs']);
+
+Route::get('/reports',[ReportsController::class,'Reports']);
 
 // Route::get('/search/', 'App\Http\Controllers\JobController@search')->name('search');
+
 Route::post('search',[JobController::class,'search']);
 Route::get('search',[JobController::class,'search']);
 Route::middleware([

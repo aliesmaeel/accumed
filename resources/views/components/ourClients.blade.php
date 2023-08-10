@@ -46,15 +46,15 @@ use App\Models\HomePage;
     }
 
     span.baby-green {
-        color: #5D786F;
+        color: #587c7f;
     }
 
     span.baby-gray.client {
-        color: #d1d5db;
+        color: #333333;
     }
 
     .secion-service p.text-gray-500 {
-        color: #5D786F;
+        color: #587c7f;
 
     }
 
@@ -73,9 +73,11 @@ use App\Models\HomePage;
     }
     .speak-themselves{
         font-size:26px;
+        color: #587c7f;
+        font-family: "Bliss Pro";
     }
 </style>
-<div class="secion-service ourClients">
+<div class="secion-service ourClients px-3">
     <div class="p-8">
         <div class="flex felx-col items-center justify-center">
 
@@ -83,73 +85,20 @@ use App\Models\HomePage;
         <h1 class="text-4xl font-medium  text-gray-700 text-center mt-1">
             <span class="baby-green">OUR </span><span class="baby-gray client">CLIENTS</span>
         </h1>
-        <p class="text-center mt-6 text-2xl font-bold text-gray-500 p-auto speak-themselves">
+        <p class="text-center mt-6 text-2xl font-bold  p-auto speak-themselves">
             Our clients & results speak for themselves
         </p>
     </div>
     <diV class="mySwiper overflow-x-hidden relative">
         <div class="p-4 swiper-wrapper">
+
+            @foreach($clients as $client)
             <div class="p-8 text-center swiper-slide">
                 <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/HokomehDubai.svg') }}" class="services" />
-
+                    <img src="{{ $client->logo ?'/storage/'.$client->logo : ''}}" alt="{{$client->name ?? ''}}" class="services">
                 </div>
-
-
             </div>
-
-            <div class="p-8 text-center swiper-slide">
-                <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/HokomehDubai.svg') }}" class="services" />
-
-                </div>
-
-            </div>
-
-            <div class="p-8 text-center swiper-slide">
-                <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/HokomehDubai.svg') }}" class="services" />
-
-                </div>
-
-            </div>
-
-            <div class="p-8 text-center swiper-slide">
-                <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/HokomehDubai.svg') }}" class="services" />
-
-                </div>
-
-
-            </div>
-
-            <div class="p-8 text-center swiper-slide">
-                <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/HokomehDubai.svg') }}" class="services" />
-
-                </div>
-
-
-            </div>
-
-            <div class="p-8 text-center swiper-slide">
-                <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/HokomehDubai.svg') }}" class="services" />
-
-                </div>
-
-
-            </div>
-
-            <div class="p-8 text-center swiper-slide">
-                <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/HokomehDubai.svg') }}" class="services" />
-
-                </div>
-
-
-            </div>
-
+            @endforeach
         </div>
         <div class="swiper-pagination"></div>
     </div>

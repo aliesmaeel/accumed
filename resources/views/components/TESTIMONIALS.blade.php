@@ -5,7 +5,6 @@ use App\Models\HomePage;
 <style>
     .secion-service.TESTIMONIALS {
         background-color: #F4F4F4;
-
     }
 
     img.services {
@@ -62,7 +61,7 @@ use App\Models\HomePage;
     }
 
     .secion-service p.text-gray-500 {
-        color: #5D786F;
+        color: #587c7f;
 
     }
 
@@ -83,7 +82,7 @@ use App\Models\HomePage;
     margin-bottom: 11px;
     /* padding-bottom: 23px; */
 
-        
+
     }
 
     .message2 {
@@ -107,17 +106,25 @@ use App\Models\HomePage;
     }
     .TESTIMONIALS h1.TESTIMONIALS {
     font-size: 116px;
+        padding-top: 25px;
     }
     .TESTIMONIALS {
     background-color: #F4F4F4;
-    padding-top: 18px !important;
+        padding-bottom: 30px;
     /* padding-bottom: 33px !important; */
 }
 .Proven{
     font-size: 20px !important;
 }
+.background-image{
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+
+}
 </style>
-<div class="secion-service TESTIMONIALS">
+<div class=" secion-service TESTIMONIALS">
     <div class="">
         <div class="flex felx-col items-center justify-center">
 
@@ -133,113 +140,28 @@ use App\Models\HomePage;
 
     <div class="flex  grid-cols-1 md:grid-cols-3 my-service  swiper mySwiperTest">
         <div class="swiper-wrapper">
+
+            @foreach($Testimonials as $testimonial)
             <div class="p-8 text-center swiper-slide">
                 <div class="flex justify-center items-center">
                     <img id="" src="{{ asset('/images/HomePage/authorMassege.jpeg') }}" class="services authorMassege" />
                     <div class="grid absolute message">
-                        <p class="absolute text-center message1">“ Great Service ”</p>
-                        <p class="absolute text-center message2">Lorem ipsum
-                            dolor sit amet, consectetuer adipiscing elit,
-                            sed diam nonummy nibh euismod tincidunt</p>
+                        <p class="absolute text-center message1">“ {{$testimonial->title}} ”</p>
+                        <p class="absolute text-center message2">{{$testimonial->description}}</p>
                     </div>
                 </div>
 
-                <div id="authAndName" class="flex"><img src="{{ asset('/images/HomePage/authorIMG.svg') }}">
-                <div>
-                     <p class="font-bold">John Smith</p>
-                    <p> Hr Manager</p>
-                   </div>
-                </div>
-            </div>
+                <div id="authAndName" class="flex">
+                    <div class="background-image" style="background-image:url({{ asset('/storage/'.$testimonial->image) }}) ">
 
-            <div class="p-8 text-center swiper-slide">
-                <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/authorMassege.jpeg') }}" class="services authorMassege" />
-                    <div class="grid absolute message">
-                        <p class="absolute text-center message1">“ Great Service ”</p>
-                        <p class="absolute text-center message2">Lorem ipsum
-                            dolor sit amet, consectetuer adipiscing elit,
-                            sed diam nonummy nibh euismod tincidunt</p>
                     </div>
-                </div>
-                <div id="authAndName" class="flex"><img src="{{ asset('/images/HomePage/authorIMG.svg') }}">
-                <div>
-                     <p class="font-bold">John Smith</p>
-                    <p> Hr Manager</p>
+                <div class="w-1/2">
+                     <p class="font-bold">{{$testimonial->name}}</p>
+                    <p>{{$testimonial->position}}</p>
                    </div>
                 </div>
             </div>
-            <div class="p-8 text-center swiper-slide">
-                <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/authorMassege.jpeg') }}" class="services authorMassege" />
-                    <div class="grid absolute message">
-                        <p class="absolute text-center message1">“ Great Service ”</p>
-                        <p class="absolute text-center message2">Lorem ipsum
-                            dolor sit amet, consectetuer adipiscing elit,
-                            sed diam nonummy nibh euismod tincidunt</p>
-                    </div>
-                </div>
-                <div id="authAndName" class="flex"><img src="{{ asset('/images/HomePage/authorIMG.svg') }}">
-                <div>
-                     <p class="font-bold">John Smith</p>
-                    <p> Hr Manager</p>
-                   </div>
-                </div>
-            </div>
-            <div class="p-8 text-center swiper-slide">
-                <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/authorMassege.jpeg') }}" class="services authorMassege" />
-                    <div class="grid absolute message">
-                        <p class="absolute text-center message1">“ Great Service ”</p>
-                        <p class="absolute text-center message2">Lorem ipsum
-                            dolor sit amet, consectetuer adipiscing elit,
-                            sed diam nonummy nibh euismod tincidunt</p>
-                    </div>
-                </div>
-
-                <div id="authAndName" class="flex"><img src="{{ asset('/images/HomePage/authorIMG.svg') }}">
-                <div>
-                     <p class="font-bold">John Smith</p>
-                    <p> Hr Manager</p>
-                   </div>
-                </div>
-            </div>
-
-            <div class="p-8 text-center swiper-slide">
-                <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/authorMassege.jpeg') }}" class="services authorMassege" />
-                    <div class="grid absolute message">
-                        <p class="absolute text-center message1">“ Great Service ”</p>
-                        <p class="absolute text-center message2">Lorem ipsum
-                            dolor sit amet, consectetuer adipiscing elit,
-                            sed diam nonummy nibh euismod tincidunt</p>
-                    </div>
-                </div>
-                <div id="authAndName" class="flex"><img src="{{ asset('/images/HomePage/authorIMG.svg') }}">
-                <div>
-                     <p class="font-bold">John Smith</p>
-                    <p> Hr Manager</p>
-                   </div>
-                </div>
-            </div>
-            <div class="p-8 text-center swiper-slide">
-                <div class="flex justify-center items-center">
-                    <img id="" src="{{ asset('/images/HomePage/authorMassege.jpeg') }}" class="services authorMassege" />
-                    <div class="grid absolute message">
-                        <p class="absolute text-center message1">“ Great Service ”</p>
-                        <p class="absolute text-center message2">Lorem ipsum
-                            dolor sit amet, consectetuer adipiscing elit,
-                            sed diam nonummy nibh euismod tincidunt</p>
-                    </div>
-                </div>
-                <div id="authAndName" class="flex"><img src="{{ asset('/images/HomePage/authorIMG.svg') }}">
-                   <div>
-                     <p class="font-bold">John Smith</p>
-                    <p> Hr Manager</p>
-                   </div>
-                </div>
-            </div>
-
+            @endforeach
         </div>
 
         <div class="swiper-button-prev"></div>
@@ -277,6 +199,7 @@ use App\Models\HomePage;
                 slidesPerView: 3,
                 spaceBetween: 20
             },
+
 
             // when window width is >= 480px
             480: {

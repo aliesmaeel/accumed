@@ -51,10 +51,10 @@ use App\Models\Blog;
         color: #333333;
         position: relative;
         border-radius: 7.3px;
-    display: inline-block;
-    padding: 0.2em 18px;
-    padding-right: 18px;
-    padding-left: 3px;
+        display: inline-block;
+        padding: 0.2em 18px;
+        padding-right: 18px;
+        padding-left: 3px;
     }
    
     </style>

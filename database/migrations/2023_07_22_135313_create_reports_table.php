@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
             $table->text('report_title');
+            $table->string('image');
             $table->timestamps();
         });
     }

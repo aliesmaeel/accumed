@@ -95,7 +95,7 @@ textarea{
         margin-left: 0px;
         margin-right: -3px;
         position: absolute;
-        background: #CCE72E;
+        background: #D5E04D;
         /* transform: rotate(2deg); */
         top: 25px;
         border-radius: 5px;

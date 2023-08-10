@@ -33,7 +33,7 @@ header {
     justify-content: center;
     /* background-color: #CCE72E !important; */
     font-size: 22px !important;
-    width: 122px !important;
+    width: 140px !important;
     height: 40px !important;
     font-weight: bolder !important;
     border-radius: 20px;
@@ -41,26 +41,26 @@ header {
 }
 
 label.career-type {
-    position: relative;
-    left: 25%;
+    left: 33%;
     width: max-content;
     font-size: 13px;
     color: #597B7C !important;
     height: max-content;
-    top: 40%;
+    top: 50%;
 }
 
 [type=checkbox]:checked,
 [type=radio]:checked {
     background-color: #D5E04D !important;
     background-image: url('https://accumed.aratech.co/images/HomePage/true.svg') !important;
-    background-size: 50% 50% !important;
+    background-size: 33% 47% !important;
     background-position: right !important
 }
 
 .news-events-section .apply {
     margin: inherit;
     margin-top: 24px;
+
 }
 
 .careers-job-section div p {
@@ -69,11 +69,10 @@ label.career-type {
 }
 
 .date div {
-    width: 83px;
     height: -webkit-fill-available;
     background: #D5E04D;
     text-align: center;
-    padding: 16px;
+    padding: 10px;
 }
 
 p.time-location {
@@ -87,8 +86,8 @@ p.time-location {
 }
 
 .article-content {
-    display: contents !important;
     font-size: small;
+
 }
 
 
@@ -133,10 +132,13 @@ p.time-location {
 }
 
 .coffee {
+    width: 35%;
+    height: 60%;
     position: absolute;
-    bottom: 20px;
-    right: 0;
+    bottom: 10%;
+    right: 10%;
     max-width: 275px;
+
 }
 
 .service-cover {
@@ -199,7 +201,6 @@ p.time-location {
 }
 
 .last-sec {
-    max-width: 80%;
     margin: auto;
 }
 
@@ -216,7 +217,7 @@ p.time-location {
 }
 
 .benifits img {
-    max-width: 305px;
+    max-width: 100%;
     display: inline-block;
 }
 
@@ -352,15 +353,30 @@ button.view {
     color: #333333;
     font-family: "BlissPro-Heavy";
 }
-
+.date {
+    width: 5%;
+}
 .reports button {
     width: 116px;
     height: 32px;
     margin-top: unset !important;
 }
-
+.apply-a {
+    width: 150px;
+    align-items: center;
+    height: 34px;
+    font-weight: 600;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background: #D5E04D;
+    padding: 7px;
+    color: #333333;
+    font-family: "BlissPro-Heavy";
+}
 button.apply {
-    width: 161px;
+    width: 130px;
     align-items: center;
     justify-content: space-evenly;
     height: 37px;
@@ -404,6 +420,7 @@ button.apply {
 
 .careers-details {
     padding: 0.5rem;
+  box-shadow: 5px 5px 5px gray
 }
 
 .careers .my-contact {
@@ -434,8 +451,8 @@ button.apply {
 
 .careers .job-title {
     /* padding-bottom: 50px; */
-    color: #312F35;
-    font-family: "BlissPro-Medium";
+    color: #312f35;
+    font-family: "BlissPro-Heavy";
 }
 
 [type=checkbox]:checked:hover,
@@ -454,6 +471,7 @@ label.label-job-title {
 p.recent-job {
     font-family: "BlissPro-Medium" !important;
     color: #333333 !important;
+    font-weight: bold;
 }
 
 p.time-location.recent-job {
@@ -461,7 +479,6 @@ p.time-location.recent-job {
 }
 
 .flex.space-x-2.recent-job {
-    width: 149px;
     align-self: center;
 }
 
@@ -530,7 +547,7 @@ textarea {
     margin-left: -3px;
     margin-right: -3px;
     position: absolute;
-    background: #CCE72E;
+    background: #D5E04D;
     /* transform: rotate(2deg); */
     top: 25px;
     border-radius: 5px;
@@ -538,8 +555,9 @@ textarea {
 }
 
 .frech:before {
-    margin-left: -18px;
-    top: 21px;
+    margin-left: -11px;
+    top: 24px;
+    height: 50%;
 }
 
 *:focus {
@@ -908,9 +926,7 @@ div.my-icon {
         width: 90% !important;
         font-size: 13.49pt !important;
     }
-    .date.bg-white {
-        width: min-content;
-    }
+
     .careers .choose {
         margin: auto !important;
     }
@@ -1087,10 +1103,6 @@ img.iconFooter {
     font-size: smaller !important;
 }
 
-.date.bg-white {
-    height: fit-content;
-}
-
 
 /* footer */
 
@@ -1218,18 +1230,6 @@ header {
     }
 }
 
-@media (max-width:767px) {
-    label.career-type {
-        position: relative;
-        left: 36%;
-        width: max-content;
-        font-size: 13px;
-        color: #597B7C !important;
-        height: max-content;
-        top: 47%;
-
-    }
-}
 
 @media (min-width:200px) and (max-width:640px) {
     .text-blue:before {
@@ -1245,6 +1245,13 @@ header {
         border-radius: 9px;
     }
 
+    .date.bg-white {
+        position: relative;
+        top: 0%;
+        left: 0%;
+        width: min-content;
+    }
+
     .custom-text-9xl{
         font-size: 2.5rem;
         line-height: 1;
@@ -1258,15 +1265,7 @@ header {
         line-height: 10px !important;
     }
 
-    label.career-type {
-        position: relative;
-        left: 23%;
-        width: max-content;
-        font-size: 13px;
-        color: #597B7C !important;
-        height: max-content;
-        top: 48%;
-    }
+
 
 }
 @media (max-width: 360px) {
@@ -1289,6 +1288,21 @@ header {
         line-height: 1;
     }
 }
+
+@media (max-width: 935px) {
+.line-between-circles {
+    display: none;
+}
+
+    /*@media (max-width: 767px) {*/
+    /*    label.career-type {*/
+    /*        left: 25%;*/
+    /*        top: 25%;*/
+    /*    }*/
+    /*}*/
+    
+}
+
 
 
 

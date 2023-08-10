@@ -6,13 +6,13 @@
 @endsection
 
 @section('content')
+    <div class="mx-auto" >
     <section>
-        <div class="container mx-auto" >
         @include('components.service')
         @include('components.ourShows')
         @include('components.TESTIMONIALS')
         @include('components.ourClients')
         @include('components.organization')
-        </div>
     </section>
+    </div>
 @endsection

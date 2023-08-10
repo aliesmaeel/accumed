@@ -6,7 +6,38 @@
 @endsection
 
 
-
+<style>
+ .service-cover {
+     flex: 1;
+     margin: 1%;
+ }
+ .line-between-circles {
+     border-top: 3px dotted grey;
+     width: 10% !important; /* Adjust the line length as needed */
+     height: 55px; /* Adjust the line thickness as needed */
+     background-color: #f1f2f2;
+ }
+ .background_image {
+     background-position: 132px;
+     background-position-x: 255px;
+     background-position-y: 188px;
+     background-size: 300px;
+     background-repeat: no-repeat;
+ }
+ .pen-image {
+     height: 450px;
+     background-position-x: 10%;
+ }
+ .image-under-lines {
+     left: 7%;
+ }
+ .loc::before {
+     height: 50%;
+ }
+ .service-cover-loc::before {
+     top: 20px !important;
+ }
+</style>
 
 @section('content')
 <section class=" bg-light m-auto">
@@ -25,8 +56,8 @@
                     <span class="loc">Bene</span>fits
                 </p>
             </div>
-            <div class="w-7/12 flex items-center px-5">
-                <p class="heavy-font text-a-grey text-left leading-5">
+            <div class="w-7/12 flex items-end px-5">
+                <p class="heavy-font text-a-grey text-left leading-5 pb-[7%]">
                     Addressing RCM challenges requires a combination of technology solutions, process improvements, staff training, and effective collaboration between healthcare providers, payers, and regulatory bodies.
                     <br>
                     <br>
@@ -67,12 +98,14 @@
             @endforeach
         </div>
 
-        <div class="md:w-1/2 sm:w-full items-center relative lg:pl-16 md:px-4 sm:px-0">
-            <p class="custom-text-9xl  text-a-grey uppercase heavy-font"> We <span class="bg-[url('/images/target.png')] bg-no-repeat bg-contain bg-left-center focus leading-tight">focus</span> on
-                <img src="/images/Tea-Cup.png" class="coffee">
+        <div  class="  md:w-1/2 sm:w-full items-center relative lg:pl-16 md:px-4 sm:px-0">
+{{--            <p  class="--}}
+{{--            custom-text-9xl  text-a-grey uppercase heavy-font">--}}
+{{--                We <span class="bg-[url('/images/target.png')] bg-no-repeat bg-contain bg-left-center focus leading-tight">focus</span>--}}
+{{--               <span style="background-image: url({{asset('/images/Tea-Cup.png')}})" class="background_image"> on </span>--}}
+{{--            </p>--}}
 
-            </p>
-
+        <img src="{{asset('images/focusWithCoffee.png')}}" />
         </div>
 
     </div>
@@ -82,27 +115,21 @@
     <!-- third section -->
 
     <div class="bg-[url('/images/lines_bg_1.png')] bg-cover px-16">
-        <h1 class="heavy-font text-5xl text-center mb-8">Our <span class="loc">Services</span> Cover</h1>
+        <h1 class="heavy-font text-5xl text-center mb-8">Our <span class=" service-cover-loc loc">Services</span> Cover</h1>
 
-        <div class=" py-8 px-32">
-
-            <div class="flex gap-3 items-center justify-center">
-                <div class="service-cover w-1/5">
+            <div class="flex flex-wrap items-center justify-center">
+                <div class="service-cover">
                     <div class="flex flex-col justify-center service-cover-block flex border-2 rounded-full items-center text-center p-6">
-
                         <div class="p-3 rounded-full">
                             <img src="/images/icon1.svg">
                         </div>
-
                     </div>
                     <p class="heavy-font text-sm" > FULL RCM SOLUTION</p>
-
                 </div>
 
-                <div class="line-block"><hr class="line"></div>
-                
+                <div class="line-between-circles"></div>
 
-                <div class=" service-cover w-1/6">
+                <div class=" service-cover ">
                     <div class="flex flex-col justify-center service-cover-block flex border-2 rounded-full items-center text-center p-6">
 
                         <div class="p-3 rounded-full ">
@@ -113,10 +140,10 @@
                     <p class="heavy-font text-sm" >RCM & PRIVATIZATION CONSULTANCY SERVICES</p>
 
                 </div>
-                <div class="line-block"><hr class="line"></div>
+                <div class="line-between-circles"></div>
 
 
-                <div class="service-cover w-1/6">
+                <div class="service-cover ">
                     <div class="flex flex-col justify-center service-cover-block flex border-2 rounded-full items-center text-center p-6">
 
                         <div class="p-3 rounded-full">
@@ -127,10 +154,9 @@
                     <p class="heavy-font text-sm">SMES CUSTOMIZED RCM SOLUTION</p>
 
                 </div>
-                <div class="line-block"><hr class="line"></div>
+                <div class="line-between-circles"></div>
 
-
-                <div class="service-cover w-1/6">
+                <div class="service-cover ">
                     <div class="flex flex-col justify-center service-cover-block flex border-2 rounded-full items-center text-center p-6">
 
                         <div class="p-3 rounded-full">
@@ -142,18 +168,15 @@
 
                 </div>
             </div>
-
-        </div>
-
-
     </div>
 
 
     <!-- last section  -->
 
-    <div class="py-32 px-16 text-center last-sec bg-[url('')]">
-        <h1 class="heavy-font text-4xl text-center mb-8">WE PRIORITIZE YOUR NEEDS</h1>
-        <p class="heavy-font text-sm text-center lg:px-16">At ACCUMED we take care of complicated insurance and patient billing processes by 
+    <div class="pen-image text-center last-sec px-12  relative  bg-[url('/images/lines_bg_1.png')] bg-cover mt-10">
+        <img  src="{{asset('/images/notebookpen.png')}}" class="absolute image-under-lines" />
+        <h1 class="heavy-font text-4xl text-center mb-8 pt-24 relative">WE PRIORITIZE YOUR NEEDS</h1>
+        <p class="heavy-font text-sm text-left  m-auto w-1/2 relative">At ACCUMED we take care of complicated insurance and patient billing processes by
 providing the latest solutions to manage your revenue efficiently in a timely manner.</p>
     </div>
 

@@ -64,10 +64,10 @@ use App\Models\HomePage;
     <div class="relative mx-auto px-32 py-32 sm:px-18 lg:flex lg:h-screen lg:items-center lg:px-18 pt-28 pb-28 hero">
         <div class="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right hero-with-sub">
 
-            <h1 class="text-3xl font-light sm:text-5xl text-white mb-4 text-left"><span class="color-green">Maximize
-                </span>Your Revenue While Optimizing Healthcare Quality
+            <h1 class="text-3xl font-light sm:text-5xl text-white mb-4 text-left"><span class="color-green">
+                    Maximize </span>Your Revenue While Optimizing Healthcare Quality
             </h1>
-            <p class="text-white text-left line-height-small">{{ HomePage::firstOrFail()->hero_text }}</p>
+            <p class="text-white text-left line-height-small">{{ $HomePage->hero_text }}</p>
             <div class="mt-8 flex gap-4 text-center call-write-button justify-flex-start">
                 <a href="#" class="block w-full rounded bg-white px-12 py-3 text-sm font-medium text-black shadow hover:bg-rose-700 focus:outline-none   sm:w-auto hover:bg-green-500  hover:text-white">
                     Our Services

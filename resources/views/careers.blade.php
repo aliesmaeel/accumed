@@ -1,6 +1,3 @@
-<?php
-$job = \App\Models\Job::orderBy(DB::raw('job_title'))->get();
-?>
 @extends('layouts.master', ['header_image' => '/images/HomePage/CAREERS-job.png'])
 
 
@@ -15,6 +12,48 @@ $job = \App\Models\Job::orderBy(DB::raw('job_title'))->get();
             background-color: #F4F4F4;
 
         }
+        .loc::before {
+            content: " ";
+            display: block;
+            height: 65%;
+            width: 100%;
+            margin-left: 3px;
+            margin-right: -3px;
+            position: absolute;
+            background: #D5E04D;
+            transform: rotate(2deg);
+            top: 12px;
+            border-radius: 5px;
+            z-index: -1;
+        }
+        .space-between {
+            height: 100%;
+            margin: auto;
+        }
+        select {
+            background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") !important;
+        }
+        .rec::before {
+            content: " ";
+            display: block;
+            height: 48%;
+            width: 104%;
+            margin-left: -4px;
+            margin-right: -3px;
+            position: absolute;
+            background: #D5E04D;
+            transform: rotate(2deg);
+            top: 26px;
+            border-radius: 5px;
+            z-index: -1;
+        }
+        .border-span {
+            border: 2px solid #D5E04D;
+        }
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
     </style>
     <div class="careers-job-section">
         <section class="contactUs careers">
@@ -22,32 +61,37 @@ $job = \App\Models\Job::orderBy(DB::raw('job_title'))->get();
                 by role</h1>
             <form action="{{ url('/search') }}" method="post">
                 <div class="flex justify-center rounded-xl items-center">
-                    <div class="container mx-auto my-4 px-4 lg:px-20">
-
+                    <div class=" mx-auto my-4 px-4 lg:px-20">
                         <div
-                            class="w-full  my-4  mx-auto md:px-12 lg:w-9/12 pt-3 mr-auto rounded-2xl shadow-xl bg-white careers-details">
+                            class="w-full  my-4  mx-auto md:px-12 lg:w-9/12 pt-8 mr-auto rounded-2xl  bg-white careers-details">
                             <div class="grid grid-cols-1  md:grid-cols-2 pt-4  my-contact">
-                                <div class="relative ">
-                                    <p class="career-green">Search best jobs matching with your profession</p>
+                                <div class="relative flex items-end">
+                                    <p class="career-green pb-[0.1rem]">Search best jobs matching with your profession</p>
                                 </div>
-                                <div class="grid grid-cols-2">
+                                <div class="flex items-center justify-evenly">
                                     @csrf
                                 {{ csrf_field() }}
-                <div class=" space-between">
-                <label for="full" class="career-type block cursor-pointer select-none rounded-xl  text-center peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white">Full Time</label>
+
+                <div class="flex">
+                    <div>
+                <label for="full" class="relative career-type block cursor-pointer select-none rounded-xl  text-center peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white">Full Time</label>
                     @csrf
-                    <input type="radio" required name="type" value="full"  class="full-part peer  flex mx-auto text-sm font-light text-gray-100 p-3 rounded-2xl focus:outline-none ">
+                    <input type="radio" required name="type" value="full" id="full" class="full-part peer  flex m-auto text-sm font-light text-gray-100 p-2 rounded-2xl focus:outline-none ">
                 </div>
-                <div class=" space-between">
-                <label for="part" class="career-type block cursor-pointer select-none rounded-xl  text-center peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white">Part Time</label>
-                <input type="radio" required name="type" value="part" class="full-part flex mx-auto text-sm font-light text-gray-100 p-3 rounded-2xl focus:outline-none "></div>
+                </div>
+
+                <div class="flex">
+                    <div>
+                <label for="part" class="relative career-type block cursor-pointer select-none rounded-xl  text-center peer-checked:bg-blue-500 peer-checked:font-bold peer-checked:text-white">Part Time</label>
+                <input type="radio" required name="type" value="part" id="part" class="full-part flex m-auto text-sm font-light text-gray-100 p-2 rounded-2xl focus:outline-none "></div>
+                </div>
             </div>
                 </div>
                             <label for="underline_select" class="label-job-title">Job Title</label>
                             <select name="job_title" id="underline_select"
                                 class="job-title city_id_input block py-2.5 px-0 w-full text-lg  bg-transparent border-0 border-b-2 border-gray-200 appearance-none focus:outline-none focus:ring-0 focus:border-gray-200 peer">
-                                <option selected>Revenue Cycle Management Manager</option>
-                                @foreach ($job as $job)
+                                <option selected>---</option>
+                                @foreach ($AllJobs as $job)
                                     <option value="{{ $job->job_title }}">{{ $job->job_title }}</option>
                                 @endforeach
                             </select>
@@ -60,226 +104,53 @@ $job = \App\Models\Job::orderBy(DB::raw('job_title'))->get();
                     class="flex mx-auto uppercase text-sm font-light text-gray-100 p-3 rounded-lg focus:outline-none focus:shadow-outline focus:bg-white find-jobs">
                     FIND JOBS
                 </button>
-        </section>
+
         </form>
-        <h1 class="font-bold text-center my-6 mt-8 text-5xl careers-job-section"><span class="loc">Rec</span>ent Jobs
+        </section>
+        <h1 class="font-bold text-center my-6 mt-8 text-5xl careers-job-section"><span class="loc rec">Rec</span>ent Jobs
         </h1>
 
         <!-- component -->
-        <div class="flex items-center justify-center mt-20">
+        <div class="flex  mx-auto my-4 px-4 lg:px-20 ">
             <div
-                class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 recent-jobs-container">
+                class="grid grid-cols-1 gap-4 sm:grid-cols-2 w-full md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 ">
                 <!-- 1 card -->
-                <div class="relative flex justify-center flex-col">
-                    <div
-                        class="relative flex justify-center bg-white py-6  w-64 my-4 shadow-xl latest-job TopBorderPanel">
+                @foreach($RecentCareers as $RecentCareer)
+                    <div class="relative px-6 flex justify-center flex-col w-full">
+                        <span class="w-1/2 border-span"></span>
+                        <div class="relative flex justify-center w-full bg-white shadow-[5px_5px_7px_-1px_rgba(0,0,0,0.3)]">
 
-                        <div class="">
-                            <p class="text-3xl text-center  my-2 recent-job">RCM Manager</p>
-                            <div class="flex gap-6 justify-center">
-                                <div class="flex space-x-2 recent-job ">
-                                    <img src="{{ asset('/images/HomePage/careerLocation.svg') }}">
-                                    <p class="time-location text-lg recent-job">Riyadh, KSA</p>
+                            <div class="w-full p-2 text-center">
+                                <p class="text-3xl py-3 text-center w-full  recent-job">{{ $RecentCareer->job_title }}</p>
+                                <div class="flex py-3  justify-center">
+                                    <div class="flex space-x-2 recent-job  items-center ">
+                                        <img class="icon" src="{{ asset('/images/HomePage/careerLocation.svg') }}">
+                                        <p class=" text-lg recent-job">{{$RecentCareer->location }}</p>
+                                    </div>
+                                    <div class="flex space-x-2 items-center pl-10">
+                                        <img class="icon" src="{{ asset('/images/HomePage/clock.svg') }}">
+                                        <p class=" text-lg recent-job">{{$RecentCareer->type}}</p>
+                                    </div>
                                 </div>
-                                <div class="flex space-x-2 my-3">
-                                    <img src="{{ asset('/images/HomePage/clock.svg') }}">
+                                <p class="text-content text-left mb-2 recent-job p-1">{{ Str::limit($RecentCareer->description, 300) }}</p>
 
-                                    <p class="time-location text-lg recent-job">Full time</p>
-                                </div>
+
                             </div>
-                            <p class="inline text-content text-left mb-2 recent-job">Lorem ipsum dolor sit Lorem ipsum dolor sit amet,
-                                consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                                iriure dolor in hendrerit in </p>
-
 
                         </div>
-
+                        <a href="{{$RecentCareer->link}}"  class="apply-a mt-5 flex mx-auto  text-sm  font-light
+                        text-[#333333] p-1 rounded-2xl focus:outline-none focus:shadow-outline focus:bg-white">
+                            <span style="padding: 3%"> View & Apply </span><span>
+                                <img style="width: 90%; height: 90%" src="{{ asset('/images/HomePage/Apply.svg') }}">
+                            </span>
+                        </a>
                     </div>
-                    <button
-                        class="apply mt-2 flex mx-auto  text-sm  font-light  text-gray-100 p-3 rounded-lg  
-                      focus:outline-none focus:shadow-outline focus:bg-white">
-                        <span> View & Apply </span><span><img src="{{ asset('/images/HomePage/Apply.svg') }}"></span>
-                    </button>
-                </div>
-                <!-- 2 card -->
-                <div class="relative flex justify-center flex-col">
-                    <div
-                        class="relative flex justify-center bg-white py-6  w-64 my-4 shadow-xl latest-job TopBorderPanel">
+                @endforeach
 
-                        <div class="">
-                            <p class="text-3xl text-center  my-2 recent-job">RCM Manager</p>
-                            <div class="flex gap-6 justify-center">
-                                <div class="flex space-x-2 recent-job ">
-                                    <img src="{{ asset('/images/HomePage/careerLocation.svg') }}">
-                                    <p class="time-location text-lg recent-job">Riyadh, KSA</p>
-                                </div>
-                                <div class="flex space-x-2 my-3">
-                                    <img src="{{ asset('/images/HomePage/clock.svg') }}">
-
-                                    <p class="time-location text-lg recent-job">Full time</p>
-                                </div>
-                            </div>
-                            <p class="inline text-content text-left mb-2 recent-job">Lorem ipsum dolor sit Lorem ipsum dolor sit amet,
-                                consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                                iriure dolor in hendrerit in </p>
-
-
-                        </div>
-
-                    </div>
-                    <button
-                        class="apply mt-2 flex mx-auto  text-sm  font-light  text-gray-100 p-3 rounded-lg  
-                      focus:outline-none focus:shadow-outline focus:bg-white">
-                        <span> View & Apply </span><span><img src="{{ asset('/images/HomePage/Apply.svg') }}"></span>
-                    </button>
-                </div>
-
-                <!-- 3 card -->
-                <div class="relative flex justify-center flex-col">
-                    <div
-                        class="relative flex justify-center bg-white py-6  w-64 my-4 shadow-xl latest-job TopBorderPanel">
-
-                        <div class="">
-                            <p class="text-3xl text-center  my-2 recent-job">RCM Manager</p>
-                            <div class="flex gap-6 justify-center">
-                                <div class="flex space-x-2 recent-job ">
-                                    <img src="{{ asset('/images/HomePage/careerLocation.svg') }}">
-                                    <p class="time-location text-lg recent-job">Riyadh, KSA</p>
-                                </div>
-                                <div class="flex space-x-2 my-3">
-                                    <img src="{{ asset('/images/HomePage/clock.svg') }}">
-
-                                    <p class="time-location text-lg recent-job">Full time</p>
-                                </div>
-                            </div>
-                            <p class="inline text-content text-left mb-2 recent-job">Lorem ipsum dolor sit Lorem ipsum dolor sit amet,
-                                consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                                iriure dolor in hendrerit in </p>
-
-
-                        </div>
-
-                    </div>
-                    <button
-                        class="apply mt-2 flex mx-auto  text-sm  font-light  text-gray-100 p-3 rounded-lg  
-                      focus:outline-none focus:shadow-outline focus:bg-white">
-                        <span> View & Apply </span><span><img src="{{ asset('/images/HomePage/Apply.svg') }}"></span>
-                    </button>
-                </div>
-
-                <!-- 4 card -->
-                <div class="relative flex justify-center flex-col">
-                    <div
-                        class="relative flex justify-center bg-white py-6  w-64 my-4 shadow-xl latest-job TopBorderPanel">
-
-                        <div class="">
-                            <p class="text-3xl text-center  my-2 recent-job">RCM Manager</p>
-                            <div class="flex gap-6 justify-center">
-                                <div class="flex space-x-2 recent-job ">
-                                    <img src="{{ asset('/images/HomePage/careerLocation.svg') }}">
-                                    <p class="time-location text-lg recent-job">Riyadh, KSA</p>
-                                </div>
-                                <div class="flex space-x-2 my-3">
-                                    <img src="{{ asset('/images/HomePage/clock.svg') }}">
-
-                                    <p class="time-location text-lg recent-job">Full time</p>
-                                </div>
-                            </div>
-                            <p class="inline text-content text-left mb-2 recent-job">Lorem ipsum dolor sit Lorem ipsum dolor sit amet,
-                                consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                                iriure dolor in hendrerit in </p>
-
-
-                        </div>
-
-                    </div>
-                    <button
-                        class="apply mt-2 flex mx-auto  text-sm  font-light  text-gray-100 p-3 rounded-lg  
-                      focus:outline-none focus:shadow-outline focus:bg-white">
-                        <span> View & Apply </span><span><img src="{{ asset('/images/HomePage/Apply.svg') }}"></span>
-                    </button>
-                </div>
-                <!-- card 5 -->
-                <div class="relative flex justify-center flex-col">
-                    <div
-                        class="relative flex justify-center bg-white py-6  w-64 my-4 shadow-xl latest-job TopBorderPanel">
-
-                        <div class="">
-                            <p class="text-3xl text-center  my-2 recent-job">RCM Manager</p>
-                            <div class="flex gap-6 justify-center">
-                                <div class="flex space-x-2 recent-job ">
-                                    <img src="{{ asset('/images/HomePage/careerLocation.svg') }}">
-                                    <p class="time-location text-lg recent-job">Riyadh, KSA</p>
-                                </div>
-                                <div class="flex space-x-2 my-3">
-                                    <img src="{{ asset('/images/HomePage/clock.svg') }}">
-
-                                    <p class="time-location text-lg recent-job">Full time</p>
-                                </div>
-                            </div>
-                            <p class="inline text-content text-left mb-2 recent-job">Lorem ipsum dolor sit Lorem ipsum dolor sit amet,
-                                consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                                iriure dolor in hendrerit in </p>
-
-
-                        </div>
-
-                    </div>
-                    <button
-                        class="apply mt-2 flex mx-auto  text-sm  font-light  text-gray-100 p-3 rounded-lg  
-                      focus:outline-none focus:shadow-outline focus:bg-white">
-                        <span> View & Apply </span><span><img src="{{ asset('/images/HomePage/Apply.svg') }}"></span>
-                    </button>
-                </div>
-                <!--  -->
-                <div class="relative flex justify-center flex-col">
-                    <div
-                        class="relative flex justify-center bg-white py-6  w-64 my-4 shadow-xl latest-job TopBorderPanel">
-
-                        <div class="">
-                            <p class="text-3xl text-center  my-2 recent-job">RCM Manager</p>
-                            <div class="flex gap-6 justify-center">
-                                <div class="flex space-x-2 recent-job ">
-                                    <img src="{{ asset('/images/HomePage/careerLocation.svg') }}">
-                                    <p class="time-location text-lg recent-job">Riyadh, KSA</p>
-                                </div>
-                                <div class="flex space-x-2 my-3">
-                                    <img src="{{ asset('/images/HomePage/clock.svg') }}">
-
-                                    <p class="time-location text-lg recent-job">Full time</p>
-                                </div>
-                            </div>
-                            <p class="inline text-content text-left mb-2 recent-job">Lorem ipsum dolor sit Lorem ipsum dolor sit amet,
-                                consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-                                magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum
-                                iriure dolor in hendrerit in </p>
-
-
-                        </div>
-
-                    </div>
-                    <button
-                        class="apply mt-2 flex mx-auto  text-sm  font-light  text-gray-100 p-3 rounded-lg  
-                      focus:outline-none focus:shadow-outline focus:bg-white">
-                        <span> View & Apply </span><span><img src="{{ asset('/images/HomePage/Apply.svg') }}"></span>
-                    </button>
-                </div>
             </div>
         </div>
+    </div>
         @include('components.organization')
-
-        </section>
     @endsection
     <!-- <script>
         $(document).on('click', '.submitForm', function() {

@@ -45,14 +45,13 @@ class Job extends Resource
             Text::make(__('Job Title'),'job_title'),
             Text::make(__('Location'),'location'),
             // Text::make(__('Type'),'type'),
-            Select::make('Type', 'type')
-    ->options([
-        'part' => 'part',
-        'full' => 'full',
-    ]),
-            Text::make(__('Description'),'description'),
-
-
+            Select::make('Type', 'type')->options([
+                    'Part Time' => 'Part Time',
+                    'Full Time' => 'Full Time',
+                ]),
+            Text::make(__('Description'),'description')
+                ->hideFromIndex(),
+            Text::make(__('Link'),'link')
         ];
     }
 

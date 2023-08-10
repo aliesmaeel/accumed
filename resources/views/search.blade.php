@@ -20,19 +20,16 @@
                 <div class="relative flex justify-center flex-col">
                     
                     <div
-                        class="relative flex justify-center bg-white py-6   w-64 my-4 shadow-xl latest-job TopBorderPanel">
-
-                        <div class="">
-
-    
+                        class="relative flex justify-center bg-white py-6   w-64 my-4 shadow-xl ">
+                        <div class="w-full p-2 text-center">
         <!-- <div class="post-list"> -->
             <p class="text-3xl text-center  my-2 recent-job">{{ $job->job_title  }}</p>
-            <div class="flex gap-6 justify-center ">
+            <div class="flex  justify-center ">
                                 <div class="flex space-x-2 recent-job">
                                     <img src="{{ asset('/images/HomePage/careerLocation.svg') }}">
                                     <p class="time-location text-lg recent-job">{{ $job->location  }}</p>
                                 </div>
-                                <div class="flex space-x-2 my-3 recent-job">
+                                <div class="flex space-x-2  recent-job">
                                     <img src="{{ asset('/images/HomePage/clock.svg') }}">
 
                                     <p class="time-location text-lg recent-job">{{$job->type }}</p>

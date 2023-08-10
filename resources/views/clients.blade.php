@@ -16,6 +16,7 @@
             achieving the desired strategic and financial outcomes</p>
     </div>
     <div class="clients bx-6 flex flex-wrap items-center justify-around bg-[url('/images/lines_bg_1.png')] bg-cover	bg-center">
+
         @foreach($clients as $client)
         <div class="px-6 w-1/6 ">
             <img src="{{ $client->logo ?'/storage/'.$client->logo : ''}}" alt="{{$client->name ?? ''}}">

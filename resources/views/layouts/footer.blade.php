@@ -127,8 +127,8 @@ use App\Models\GetInTouch;
                                     class="text-blueGray-600 hover:text-blueGray-800  block pb-2 text-sm sm-title">Investors</a>
                             </li>
                             <li>
-                                <a class="text-blueGray-600 hover:text-blueGray-800  block pb-2 text-sm sm-title">People
-                                    and Culture
+                                <a class="text-blueGray-600 hover:text-blueGray-800  block pb-2 text-sm sm-title">
+                                    People and Culture
                                 </a>
                             </li>
                         </ul>

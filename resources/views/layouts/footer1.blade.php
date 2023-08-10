@@ -1,13 +1,15 @@
 <?php
 
+use App\Models\Footer;
 use App\Models\GetInTouch;
+
+$footers = Footer::where('active', 1)->first();
 
 ?>
 <!-- <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
 <link rel="stylesheet"
     href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"> -->
 <style>
-
   footer {
     background-color: #597B7C !important;
     color: white !important;
@@ -16,6 +18,10 @@ use App\Models\GetInTouch;
 
   footer ul li {
     color: white !important;
+  }
+
+  footer ul li a {
+    word-wrap: break-word;
   }
 
   .line-under {
@@ -52,10 +58,8 @@ use App\Models\GetInTouch;
   }
 
   .grid-cols-6.gap-5.row-gap-8 {
-    gap: 10.25rem;
-
-    margin-left: 71px;
-
+    gap: 9.25rem;
+    margin-left: 5%;
   }
 
   @media(max-width: 1024px) {
@@ -100,11 +104,12 @@ use App\Models\GetInTouch;
     }
   }
 </style>
+
 <footer class="relative mt-16 ">
   <!-- <svg class="absolute top-0 w-full h-6 -mt-5 sm:-mt-10 sm:h-16 text-deep-purple-accent-400" preserveAspectRatio="none" viewBox="0 0 1440 54">
     <path fill="currentColor" d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"></path>
   </svg> -->
-  <div class="px-16 pt-12 mx-auto sm:max-w-xl md:max-w-full md:pl-16 ">
+  <div class="px-8 pt-12 mx-auto sm:max-w-xl md:max-w-full md:pl-8 ">
     <div class="grid  row-gap-10 mb-8 lg:grid-cols-6">
       <div class="lg:col-span-1 sm:col-span-2 pb-3">
         <a href="/" aria-label="Go home" title="Company" class="inline-flex items-center mt-4">
@@ -134,89 +139,25 @@ use App\Models\GetInTouch;
             </li>
           </ul>
         </div>
-        <div>
-          <p class="font-semibold tracking-wide text-white title">
-            Company
-          </p>
-          <ul class="mt-2 space-y-2">
-            <li>
-              <a class=" hover:text-blueGray-800  block pb-2 text-sm sm-title" href="">About
-                Us</a>
-            </li>
-            <li>
-              <a class=" hover:text-blueGray-800  block pb-2 text-sm sm-title" href="">Leadership</a>
-            </li>
-            <li>
-              <a class=" hover:text-blueGray-800  block pb-2 text-sm sm-title" href="">Investors</a>
-            </li>
-            <li>
-              <a class=" hover:text-blueGray-800  block pb-2 text-sm sm-title" href="">People
-                and Culture
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p class="font-semibold tracking-wide text-white title">
-            Services
-          </p>
-          <ul class="mt-2 space-y-2">
-            <li>
-              <a class=" hover:text-blueGray-800  block pb-2 text-sm sm-title" href="">Revenue
-                Cycle Management
-              </a>
-            </li>
-            <li>
-              <a class=" hover:text-blueGray-800  block pb-2 text-sm sm-title" href="">Consulting</a>
-            </li>
-            <li>
-              <a class=" hover:text-blueGray-800  block pb-2 text-sm sm-title" href="">Health
-                Informatics & Technology</a>
-            </li>
-            <li>
-              <a class=" hover:text-blueGray-800  block pb-2 text-sm sm-title" href="">Pricing
-                & Contracting
+        @if(isset(($footers['attributes'])))
+          @foreach(($footers['attributes']) as $footer)
+            <div>
+              <p class="font-semibold tracking-wide uppercase text-white title">
+                {{$footer['titleForColumn'] ?? ''}}
+              </p>
+              <ul class="mt-2 space-y-2">
+                @if(isset($footer['columnAttributes']))
+                  @foreach($footer['columnAttributes'] as $attribute)
+                    <li>
+                      <a class=" hover:text-blueGray-800  block pb-2 text-sm sm-title" href="{{$attribute['link'] ?? ''}}">{{$attribute['text'] ?? ""}}</a>
+                    </li>
+                  @endforeach
+                @endif
+              </ul>
+            </div>
+          @endforeach
+        @endif
 
-              </a>
-            </li>
-            <li>
-              <a class=" hover:text-blueGray-800  block pb-2 text-sm sm-title " href="">Training
-
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p class="font-semibold tracking-wide text-white title">Media Center</p>
-
-          <ul class="mt-2 space-y-2">
-            <li>
-              <a class=" hover:text-blueGray-800  block pb-2 text-sm sm-title" href="/news">News & Events</a>
-            </li>
-            <li>
-              <a class=" hover:text-blueGray-800  block pb-2 text-sm sm-title" href="/blog">Blogs</a>
-            </li>
-            <li>
-              <a class=" hover:text-blueGray-800  block pb-2 text-sm sm-title" href="">Vision 2030</a>
-            </li>
-            <li>
-              <a class=" hover:text-blueGray-800  block pb-2 text-sm sm-title" href="/reports">Reports
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p class="font-semibold tracking-wide text-white title"> <a href="/clients">Clients
-            </a></p>
-
-        </div>
-        <div>
-          <p class="font-semibold tracking-wide text-white title"> <a class="" href="/careers">Careers
-            </a>
-
-          </p>
-
-        </div>
       </div>
     </div>
     <div class="flex flex-row justify-between pt-4 pb-6 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
@@ -243,4 +184,4 @@ use App\Models\GetInTouch;
       </div>
     </div>
   </div>
-  </div>
+</footer>

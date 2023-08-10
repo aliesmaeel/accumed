@@ -2,7 +2,22 @@
 
 namespace App\Providers;
 
+use App\Nova\Blog;
+use App\Nova\Client;
+use App\Nova\Dashboards\Main;
+use App\Nova\footer;
+use App\Nova\GetInTouch;
+use App\Nova\HomePage;
+use App\Nova\Job;
+use App\Nova\News;
+use App\Nova\Report;
+use App\Nova\Settings;
+use App\Nova\Testimonial;
+use App\Nova\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use Laravel\Nova\Menu\MenuItem;
+use Laravel\Nova\Menu\MenuSection;
 use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
 
@@ -16,6 +31,34 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function boot()
     {
         parent::boot();
+        Nova::mainMenu(function (Request $request) {
+            return [
+
+                MenuItem::resource(User::class),
+
+                MenuSection::make('HomePage', [
+                    MenuItem::resource(HomePage::class),
+                    MenuItem::resource(Testimonial::class),
+                ])->icon('home')->collapsable(),
+
+                MenuSection::make('Pages', [
+                    MenuItem::resource(Blog::class),
+                    MenuItem::resource(Client::class),
+                    MenuItem::resource(Job::class),
+                    MenuItem::resource(News::class),
+                    MenuItem::resource(Report::class),
+                ])->icon('book-open')->collapsable(),
+
+                MenuSection::make('Settings', [
+                    MenuItem::resource(footer::class),
+                    MenuItem::resource(GetInTouch::class),
+                    MenuItem::resource(Settings::class),
+                ])->icon('cog')->collapsable(),
+
+
+            ];
+        });
+
     }
 
     /**

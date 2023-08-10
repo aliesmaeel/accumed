@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Fields\Text;
 
@@ -43,6 +44,7 @@ class Report extends Resource
         return [
             ID::make()->sortable(),
             Text::make(__('Report Title'),'report_title'),
+            Image::make(__('Report Image'),'image'),
 
         ];
     }

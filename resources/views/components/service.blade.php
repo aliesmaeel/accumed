@@ -44,7 +44,7 @@ use App\Models\HomePage;
         font-size: 12px;
     }
     .ser{
-        padding: 30px!important;
+
         place-items: center;
     }
 
@@ -70,11 +70,11 @@ use App\Models\HomePage;
 
     span.baby-gray {
         color: #333333;
-    opacity: 33%;
+        opacity: 33%;
     }
 
     .secion-service p.text-gray-500 {
-        color: #597B7C;
+        color: #587c7f;
         font-family: "BlissPro-Heavy"
     }
 
@@ -107,8 +107,9 @@ use App\Models\HomePage;
         padding: 1rem;
     }
     div.my-service.p-4.only-services{
-column-gap:6px;
+    column-gap:6px;
     }
+
 </style>
 <div class="secion-service">
     <div class="p-8">
@@ -122,59 +123,59 @@ column-gap:6px;
         </p>
     </div>
     <div class="flex  grid-cols-1 lg:grid-cols-4 xl:grid-cols-4 md:grid-cols-4 sm:grid-cols-2  my-service p-4 only-services">
-        <div class="p-8 text-center flex flex-col justify-space-between ser">
+        <div class="py-8 text-center flex flex-col justify-space-between ser">
             <div class="flex justify-center items-center">
                 <img id="" src="https://accumed.aratech.co/images/HomePage/rcm1.svg" class="services services1">
             </div>
             <h2 class="uppercase mt-6  font-bold mb-3 ">
                 RCM
             </h2>
-            <p class="font-bold text-sm text-gray-500 ">
-                Lowering expenses &amp; improving patient experience
+            <p class="font-bold  text-gray-500 text-sm ">
+                {{$HomePage->fistServiceDescription ?? ''}}
             </p>
             <a href="#" class="ser block w-full rounded bg-white px-12 py-3 text-sm font-bold text-black shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto hover:bg-green-500 text-black">
                 Read More
             </a>
         </div>
-        <div class="p-8 text-center flex flex-col justify-space-between ser">
+        <div class="py-8 text-center flex flex-col justify-space-between ser">
             <div class="flex justify-center items-center">
                 <img id="" src="https://accumed.aratech.co/images/HomePage/consul1.svg" class="services services1">
             </div>
             <h2 class="uppercase mt-6 font-bold mb-3 ">
                 CONSULTANCY
             </h2>
-            <p class="font-bold text-sm text-gray-500 ">
-                Advising on the best integration between operations &amp; finance
+            <p class="font-bold  text-gray-500 text-sm ">
+                {{$HomePage->secondServiceDescription}}
             </p>
             <a href="#" class="ser block w-full rounded bg-white px-12 py-3 text-sm font-bold text-black shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto hover:bg-green-500 text-black">
                 Read More
             </a>
         </div>
-        <div class="p-8 text-center flex flex-col justify-space-between ser">
+        <div class="py-8 text-center flex flex-col justify-space-between ser">
             <div class="flex justify-center  items-center">
                 <img id="" src="https://accumed.aratech.co/images/HomePage/tech1.svg" class="services services1">
             </div>
             <h2 class="uppercase mt-6  font-bold mb-3 ">
                 TECHNOLOGY
             </h2>
-            <p class="font-bold  text-gray-500 text-sm tech">
-                Built in Intelligence for effective communication &amp; revenue leakage prevention
+            <p class="font-bold  text-gray-500 text-sm ">
+                {{$HomePage->thirdServiceDescription}}
             </p>
-            <a href="#" class="ser block w-full rounded bg-white px-12 py-3 text-sm font-bold text-black shadow  focus:outline-none focus:ring active:bg-rose-500 sm:w-auto hover:bg-green-500 text-black auto">
+            <a href="#" class="ser block w-full rounded bg-white px-12 py-3 text-sm font-bold text-black shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto hover:bg-green-500 text-black">
                 Read More
             </a>
         </div>
-        <div class="p-8 text-center flex flex-col justify-space-between ser">
+        <div class="py-8 text-center flex flex-col justify-space-between ser">
             <div class="flex justify-center items-center">
                 <img id="" src="https://accumed.aratech.co/images/HomePage/pric1.svg" class="services services1">
             </div>
             <h2 class="uppercase mt-6 font-bold mb-3 ">
                 PRICING &amp; CONTRACTING
             </h2>
-            <p class="font-bold text-sm text-gray-500 price">
-                Ensuring fair pricing of your contract so you can maximize your revenue
+            <p class="font-bold  text-gray-500 text-sm ">
+                {{$HomePage->fourthServiceDescription}}
             </p>
-            <a href="#" class="ser block w-full rounded bg-white px-12 py-3 text-sm font-bold text-black shadow  focus:outline-none focus:ring active:bg-rose-500 sm:w-auto hover:bg-green-500 text-black auto">
+            <a href="#" class="ser block w-full rounded bg-white px-12 py-3 text-sm font-bold text-black shadow hover:bg-rose-700 focus:outline-none focus:ring active:bg-rose-500 sm:w-auto hover:bg-green-500 text-black">
                 Read More
             </a>
         </div>
